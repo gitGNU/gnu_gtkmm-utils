@@ -1,5 +1,6 @@
 
 hh_sources = \
+	api-macros.hh \
 	glibmm-utils.hh \
 	date.hh \
 	exception.hh \

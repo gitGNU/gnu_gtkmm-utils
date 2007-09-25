@@ -182,7 +182,7 @@ AC_SUBST(GTKMM_UTILS_CFLAGS)
 
 # gcc visibility support
 if test x$ENABLE_GCC_SYMBOLS_VISIBILITY = xyes && test x$host_cpu != xx86_64 ; then
-    AC_DEFINE(HAS_GCC_VISIBILITY_SUPPORT,1,[gcc visibility support])
+    AC_DEFINE(HAVE_GCC_VISIBILITY_SUPPORT,1,[gcc visibility support])
     REQUIRED_FLAGS="-fvisibility=hidden -fvisibility-inlines-hidden"
 else
     REQUIRED_FLAGS=""

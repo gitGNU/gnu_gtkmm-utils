@@ -26,7 +26,7 @@
 namespace Glib {
 namespace Util {
 
-struct ScopeLoggerPriv
+struct GTKMM_UTILS_LOCAL ScopeLoggerPriv
 {
     Glib::Timer timer ;
     LogStream *out ;

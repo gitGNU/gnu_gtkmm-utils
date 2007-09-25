@@ -51,7 +51,7 @@ static bool s_is_active = true ;
 /// before each write, it will be waited for, otherwise there will be no
 /// thread-awareness.
 
-class LogSink {
+class GTKMM_UTILS_LOCAL LogSink {
 protected:
     mutable tr1::shared_ptr<Glib::Mutex> m_ostream_mutex ;
     ostream *m_out ;
@@ -192,19 +192,19 @@ public:
     }
 };//end class LogSink
 
-class CoutLogSink : public LogSink {
+class GTKMM_UTILS_LOCAL CoutLogSink : public LogSink {
 public:
     CoutLogSink () : LogSink (&cout) {}
     virtual ~CoutLogSink () {}
 };//end class CoutLogSink
 
-class CerrLogSink : public LogSink {
+class GTKMM_UTILS_LOCAL CerrLogSink : public LogSink {
 public:
     CerrLogSink () : LogSink (&cerr) {}
     virtual ~CerrLogSink () {}
 };//end class OStreamSink
 
-class OfstreamLogSink : public LogSink {
+class GTKMM_UTILS_LOCAL OfstreamLogSink : public LogSink {
     std::tr1::shared_ptr<ofstream> m_ofstream ;
 
     void init_from_path (const Glib::ustring &a_file_path)
@@ -250,7 +250,7 @@ public:
 };//end class OfstreamLogSink
 
 typedef std::tr1::shared_ptr<LogSink> LogSinkSafePtr ;
-struct LogStream::Priv
+struct GTKMM_UTILS_LOCAL LogStream::Priv
 {
     enum LogStream::StreamType stream_type ;
     LogSinkSafePtr sink ;

@@ -22,11 +22,13 @@
 #ifndef __GLIBMM_UTILS_INITIALIZER_H__
 #define __GLIBMM_UTILS_INITIALIZER_H__
 
+#include "api-macros.hh"
+
 namespace Glib {
 namespace Util {
 
 /// \brief Initialization worker, necessary if you need thread-safety.
-class Initializer {
+class GTKMM_UTILS_API Initializer {
 public:
     /// \brief Optional initialization function for gtkmm-utils.
     /// Sets the entire default locale and initializes Glib threading.

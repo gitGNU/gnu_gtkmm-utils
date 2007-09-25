@@ -23,11 +23,12 @@
 #define __GLIBMM_UTILS_OPTION_UTILS_H__
 
 #include <glibmm.h>
+#include "api-macros.hh"
 
 namespace Glib {
 namespace Util {
 
-class OptionDesc {
+class GTKMM_UTILS_API OptionDesc {
     Glib::ustring m_long_name ;
     gchar m_short_name ;
     Glib::ustring m_description ;

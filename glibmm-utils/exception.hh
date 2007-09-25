@@ -30,7 +30,7 @@ namespace Glib {
 namespace Util {
 
 /// \brief Base exception class.
-class Exception: public std::runtime_error
+class GTKMM_UTILS_EXCEPTION_API Exception: public std::runtime_error
 {
 public:
     Exception (const char* a_reason) ;

@@ -23,13 +23,14 @@
 #define __GLIBMM_UTILS_SCOPE_LOGGER_H__
 
 #include <tr1/memory>
+#include "api-macros.hh"
 #include "log-stream-utils.hh"
 
 namespace Glib {
 namespace Util {
 
 struct ScopeLoggerPriv ;
-class ScopeLogger
+class GTKMM_UTILS_API ScopeLogger
 {
     friend struct ScopeLoggerPriv ;
 

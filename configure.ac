@@ -61,13 +61,13 @@ AC_SUBST(GTKMM_UTILS_LICENCE)
 
 # gcc visibility support
 # explained in http://gcc.gnu.org/wiki/Visibility
-# ENABLE_GCC_SYMBOLS_VISIBILITY=yes
-# AC_ARG_ENABLE(symvis,
-#              AC_HELP_STRING([--enable-symvis=yes|no],
-#                             [use the gcc symbols visibility feature (gcc4).
-#                             default is no)]),
-#              ENABLE_GCC_SYMBOLS_VISIBILITY=$enableval,
-#              ENABLE_GCC_SYMBOLS_VISIBILITY=no)
+ ENABLE_GCC_SYMBOLS_VISIBILITY=yes
+ AC_ARG_ENABLE(symvis,
+              AC_HELP_STRING([--enable-symvis=yes|no],
+                             [use the gcc symbols visibility feature (gcc4).
+                             default is no)]),
+              ENABLE_GCC_SYMBOLS_VISIBILITY=$enableval,
+              ENABLE_GCC_SYMBOLS_VISIBILITY=no)
 
 #########################################################################
 #  don't touch this
@@ -181,12 +181,12 @@ AC_SUBST(GTKMM_UTILS_CFLAGS)
 #########################################################################
 
 # gcc visibility support
-#if test x$ENABLE_GCC_SYMBOLS_VISIBILITY = xyes && test x$host_cpu != xx86_64 ; then
-#    AC_DEFINE(HAS_GCC_VISIBILITY_SUPPORT,1,[gcc visibility support])
-#    REQUIRED_FLAGS="-fvisibility=hidden -fvisibility-inlines-hidden"
-#else
-#    REQUIRED_FLAGS=""
-#fi
+if test x$ENABLE_GCC_SYMBOLS_VISIBILITY = xyes && test x$host_cpu != xx86_64 ; then
+    AC_DEFINE(HAVE_GCC_VISIBILITY_SUPPORT,1,[gcc visibility support])
+    REQUIRED_FLAGS="-fvisibility=hidden -fvisibility-inlines-hidden"
+else
+    REQUIRED_FLAGS=""
+fi
 
 # CFLAGS, CXXFLAGS
 # Set the $GTKMM_UTILS_DEVEL environment variable

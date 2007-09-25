@@ -25,6 +25,7 @@
 #define __GLIBMM_UTILS_DATE_H__
 
 #include <glibmm/ustring.h>
+#include "api-macros.hh"
 
 namespace Glib {
 

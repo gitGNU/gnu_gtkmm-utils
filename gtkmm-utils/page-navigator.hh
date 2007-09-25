@@ -26,6 +26,7 @@
 
 #include <memory>
 #include <gtkmm/eventbox.h>
+#include "glibmm-utils/api-macros.hh"
 
 namespace Gtk {
 
@@ -44,7 +45,7 @@ namespace Util {
  * label should inform the user of the current position, ie its value should
  * be dynamically updated to something like 'x - y of z'.
  */
-class PageNavigator : public Gtk::EventBox
+class GTKMM_UTILS_API PageNavigator : public Gtk::EventBox
 {
 public:
     /** \brief Signal emmitted when a next page is requested.

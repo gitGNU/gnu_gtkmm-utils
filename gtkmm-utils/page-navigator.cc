@@ -35,7 +35,7 @@ namespace Util {
 
 /* PageNavigator::Private */
 
-class PageNavigator::Private
+class GTKMM_UTILS_LOCAL PageNavigator::Private
 {
 public:
     Private();

@@ -30,7 +30,7 @@ namespace Util {
 
 /* Tile::Private */
 
-class Tile::Private
+class GTKMM_UTILS_LOCAL Tile::Private
 {
 public:
     explicit Private(const Glib::ustring& title,

@@ -29,6 +29,7 @@
 #include <gtkmm/image.h>
 #include <gtkmm/label.h>
 #include <memory>
+#include "glibmm-utils/api-macros.hh"
 
 namespace Gtk {
 
@@ -43,7 +44,7 @@ namespace Util {
  * Another advantage is that it is widget-based, so any additional GTK+
  * widget, be it static or interactive, may be added.
  */
-class Tile : public Gtk::EventBox
+class GTKMM_UTILS_API Tile : public Gtk::EventBox
 {
 public:
     /**

@@ -33,7 +33,7 @@ namespace Glib {
 namespace Util {
 
 /// \brief Conversion exception.
-class BadConversion : public Exception
+class GTKMM_UTILS_API BadConversion : public Exception
 {
 public:
     BadConversion(const Glib::ustring& msg) : Exception(msg) {}

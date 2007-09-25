@@ -25,6 +25,7 @@
 #include <string>
 #include <tr1/memory>
 #include <glibmm/ustring.h>
+#include "api-macros.hh"
 
 #ifndef GLIBMM_DEFAULT_DOMAIN
 #define GLIBMM_DEFAULT_DOMAIN __FILE__
@@ -41,7 +42,7 @@ namespace Util {
 /// \brief The log stream class.
 /// It features logging to cout, cerr and files.
 /// It also features log domains and log levels.
-class LogStream
+class GTKMM_UTILS_API LogStream
 {
     friend LogStream& timestamp (LogStream &);
     friend LogStream& flush (LogStream &) ;

@@ -34,7 +34,7 @@ using std::tr1::shared_ptr;
 
 /* TileData */
 
-class TileData
+class GTKMM_UTILS_LOCAL TileData
 {
 public:
     TileData() : tile(0), page(1) {}
@@ -48,7 +48,7 @@ typedef list<shared_ptr<TileData> >::iterator tile_data_iter;
 
 /* TileView::Private */
 
-class TileView::Private
+class GTKMM_UTILS_LOCAL TileView::Private
 {
 public:
     explicit Private(bool use_page_view);

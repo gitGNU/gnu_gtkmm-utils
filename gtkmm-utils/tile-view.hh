@@ -39,12 +39,12 @@ namespace Gtk {
 
 namespace Util {
 
-const int TILES_PER_PAGE_DEFAULT = 20;
+const int GTKMM_UTILS_API TILES_PER_PAGE_DEFAULT = 20;
 
 /**
  * The Tile container.
  */
-class TileView : public Gtk::VBox
+class GTKMM_UTILS_API TileView : public Gtk::VBox
 {
 public:
     /**

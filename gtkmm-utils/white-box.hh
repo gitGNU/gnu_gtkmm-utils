@@ -26,6 +26,7 @@
 
 #include <gtkmm/box.h>
 #include <gtkmm/eventbox.h>
+#include "glibmm-utils/api-macros.hh"
 
 namespace Gtk {
 
@@ -36,7 +37,7 @@ namespace Util {
  *
  * TileView uses this widget as a root container.
  */
-class WhiteBox : public Gtk::EventBox
+class GTKMM_UTILS_API WhiteBox : public Gtk::EventBox
 {
 public:
     /**

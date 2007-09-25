@@ -40,17 +40,18 @@ public:
 };
 
 /// \brief Splits a string into tokens.
-std::vector<Glib::ustring> split(const Glib::ustring& str,
-                                 const Glib::ustring& delim);
+std::vector<Glib::ustring>
+GTKMM_UTILS_API split(const Glib::ustring& str,
+                      const Glib::ustring& delim);
 
-void                       trim_left(Glib::ustring& str);
+void GTKMM_UTILS_API       trim_left(Glib::ustring& str);
 
-void                       trim_right(Glib::ustring& str);
+void GTKMM_UTILS_API       trim_right(Glib::ustring& str);
 
-void                       trim(Glib::ustring& str);
+void GTKMM_UTILS_API       trim(Glib::ustring& str);
 
-template<typename T>
-inline Glib::ustring stringify(const T& x)
+template<typename T> Glib::ustring
+GTKMM_UTILS_API stringify(const T& x)
 {
     std::ostringstream os;
 
@@ -68,10 +69,10 @@ inline Glib::ustring stringify(const T& x)
 /// \param fail_if_leftover_chars  if set to true, the function will
 /// throw a BadConversion exception if any characters are remaining after
 /// the conversion
-template<typename T>
-inline void convert_to(const Glib::ustring& str,
-                       T& x,
-                       bool fail_if_leftover_chars = true)
+template<typename T> void
+GTKMM_UTILS_API convert_to(const Glib::ustring& str,
+                           T& x,
+                           bool fail_if_leftover_chars = true)
 {
     std::istringstream is(str.raw());
     char c;
@@ -89,16 +90,16 @@ inline void convert_to(const Glib::ustring& str,
 /// throw a BadConversion exception if any characters are remaining after
 /// the conversion
 /// \return  the object with converted value
-template<typename T>
-inline T convert_to(const Glib::ustring& str,
-                    bool fail_if_leftover_chars = true)
+template<typename T> T
+GTKMM_UTILS_API convert_to(const Glib::ustring& str,
+                           bool fail_if_leftover_chars = true)
 {
     T x;
     convert_to(str, x, fail_if_leftover_chars);
     return x;
 }
 
-Glib::ustring uprintf(const Glib::ustring& format, ...);
+Glib::ustring GTKMM_UTILS_API uprintf(const Glib::ustring& format, ...);
 
 } // namespace Util
 

@@ -25,7 +25,11 @@
 #define __GTKMM_UTILS_LOGGING_EXAMPLE_H__
 
 #include <tr1/memory>
-#include <gtkmm.h>
+#include <gtkmm/box.h>
+#include <gtkmm/button.h>
+#include <gtkmm/entry.h>
+#include <gtkmm/label.h>
+#include <gtkmm/window.h>
 
 class Calculator;
 

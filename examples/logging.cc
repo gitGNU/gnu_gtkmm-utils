@@ -34,6 +34,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <gtkmm/main.h>
 #include "glibmm-utils/glibmm-utils.hh"
 #include "logging.hh"
 

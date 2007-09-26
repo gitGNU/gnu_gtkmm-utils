@@ -221,27 +221,27 @@ public:
 /// \brief logs a timestamp. Basically the
 /// the current date. You use it like:
 /// Glib::Util::LogStream out ; out << Glib::Util::timestamp ;
-LogStream& timestamp (LogStream&);
+LogStream& GTKMM_UTILS_API timestamp (LogStream&);
 
 /// \brief flushes the stream
 /// Use it like: Glib::Util::LogStream out ;
 /// out << "Hello" << Glib::Util::flush ;
-LogStream& flush (LogStream &) ;
+LogStream& GTKMM_UTILS_API flush (LogStream &) ;
 
 /// \brief log a '\\n' and flushes the stream
 /// Use it like: Glib::Util::LogStream out ;
 /// out << "hello"<< Glib::Util::endl ;
-LogStream& endl (LogStream &) ;
+GTKMM_UTILS_API LogStream& endl (LogStream &) ;
 
 /// \brief sets the log level to normal
 /// Use it like Glib::Util::LogStream out ;
 /// out << Glib::Util::level_normal << "blabla" ;
-LogStream& level_normal (LogStream &) ;
+LogStream& GTKMM_UTILS_API level_normal (LogStream &) ;
 
 /// \brief sets the log level to verbose
 /// Use it lik: Glib::Util::LogStream out ;
 /// out << Glib::Util::level_verbose << "bla bla bla" ;
-LogStream& level_verbose (LogStream &) ;
+LogStream& GTKMM_UTILS_API level_verbose (LogStream &) ;
 
 } // namespace Util
 } // namespace Glib

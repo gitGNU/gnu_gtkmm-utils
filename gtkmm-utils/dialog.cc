@@ -23,7 +23,8 @@
 
 #include "dialog.hh"
 
-#include <gtkmm.h>
+#include <gtkmm/messagedialog.h>
+#include <gtkmm/stock.h>
 
 namespace Gtk
 {
@@ -38,7 +39,7 @@ namespace
 {
 
 static int
-display_dialog_simple(Gtk::MessageType message_type,
+GTKMM_UTILS_LOCAL display_dialog_simple(Gtk::MessageType message_type,
                       const Glib::ustring& message,
                       const Glib::ustring& title,
                       const Glib::ustring& secondary_text)

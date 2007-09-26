@@ -25,6 +25,7 @@
 #define __GTKMM_UTILS_DIALOG_H__
 
 #include <glibmm/ustring.h>
+#include "glibmm-utils/api-macros.hh"
 
 namespace Gtk
 {
@@ -35,25 +36,25 @@ namespace Util
 namespace Dialog
 {
 
-    int display_info(const Glib::ustring& message,
-                     const Glib::ustring& title = Glib::ustring(),
-                     const Glib::ustring& secondary_text = Glib::ustring());
+    int GTKMM_UTILS_API display_info(const Glib::ustring& message,
+                                     const Glib::ustring& title = Glib::ustring(),
+                                     const Glib::ustring& secondary_text = Glib::ustring());
 
-    int display_warning(const Glib::ustring& message,
-                        const Glib::ustring& title = Glib::ustring(),
-                        const Glib::ustring& secondary_text = Glib::ustring());
+    int GTKMM_UTILS_API display_warning(const Glib::ustring& message,
+                                        const Glib::ustring& title = Glib::ustring(),
+                                        const Glib::ustring& secondary_text = Glib::ustring());
 
-    int display_error(const Glib::ustring& message,
-                      const Glib::ustring& title = Glib::ustring(),
-                      const Glib::ustring& secondary_text = Glib::ustring());
+    int GTKMM_UTILS_API display_error(const Glib::ustring& message,
+                                      const Glib::ustring& title = Glib::ustring(),
+                                      const Glib::ustring& secondary_text = Glib::ustring());
 
-    int ask_yes_no_question(const Glib::ustring& message,
-                            const Glib::ustring& title = Glib::ustring(),
-                            const Glib::ustring& secondary_text = Glib::ustring());
+    int GTKMM_UTILS_API ask_yes_no_question(const Glib::ustring& message,
+                                            const Glib::ustring& title = Glib::ustring(),
+                                            const Glib::ustring& secondary_text = Glib::ustring());
 
-    int ask_yes_no_cancel_question(const Glib::ustring& message,
-                                   const Glib::ustring& title = Glib::ustring(),
-                                   const Glib::ustring& secondary_text = Glib::ustring());
+    int GTKMM_UTILS_API ask_yes_no_cancel_question(const Glib::ustring& message,
+                                                   const Glib::ustring& title = Glib::ustring(),
+                                                   const Glib::ustring& secondary_text = Glib::ustring());
 
 } // namespace Dialog
 
